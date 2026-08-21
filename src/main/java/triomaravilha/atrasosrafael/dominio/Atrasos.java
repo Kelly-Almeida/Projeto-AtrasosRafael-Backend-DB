@@ -13,4 +13,5 @@ public class Atrasos {
     private Professor professor;
     private LocalDate data;
     private LocalTime tempoAtraso;
+    private String aula;
 }
