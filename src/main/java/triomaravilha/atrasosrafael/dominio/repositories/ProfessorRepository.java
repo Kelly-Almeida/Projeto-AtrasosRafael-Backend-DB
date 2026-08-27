@@ -1,7 +1,7 @@
 package triomaravilha.atrasosrafael.dominio.repositories;
 
 import triomaravilha.atrasosrafael.dominio.Professor;
-import triomaravilha.atrasosrafael.infrastructure.entity.ProfessorEntity;
+import triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
 
 import java.util.List;
 
