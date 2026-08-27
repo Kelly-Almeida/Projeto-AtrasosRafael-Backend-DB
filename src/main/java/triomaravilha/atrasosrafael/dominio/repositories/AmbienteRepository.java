@@ -1,7 +1,7 @@
 package triomaravilha.atrasosrafael.dominio.repositories;
 
 import triomaravilha.atrasosrafael.dominio.Ambiente;
-import triomaravilha.atrasosrafael.infra.entity.AmbienteEntity;
+import triomaravilha.atrasosrafael.infraestrutura.entity.AmbienteEntity;
 
 import java.util.List;
 
