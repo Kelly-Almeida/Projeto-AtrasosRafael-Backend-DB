@@ -1,10 +1,10 @@
 package org.triomaravilha.atrasosrafael.infrastructure01.repository;
 
 import org.springframework.stereotype.Repository;
-import triomaravilha.atrasosrafael.dominio.Professor;
-import triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
-import triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
-import triomaravilha.atrasosrafael.infrastructure01.repository.ProfessorEntityRepository;
+import org.triomaravilha.atrasosrafael.dominio.Professor;
+import org.triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
+import org.triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
+
 
 import java.util.List;
 import java.util.stream.StreamSupport;

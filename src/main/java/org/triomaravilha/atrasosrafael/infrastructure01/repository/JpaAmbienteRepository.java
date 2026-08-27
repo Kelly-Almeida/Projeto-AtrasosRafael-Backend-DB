@@ -1,10 +1,10 @@
 package org.triomaravilha.atrasosrafael.infrastructure01.repository;
 
 import org.springframework.stereotype.Repository;
-import triomaravilha.atrasosrafael.dominio.Ambiente;
-import triomaravilha.atrasosrafael.dominio.repositories.AmbienteRepository;
-import triomaravilha.atrasosrafael.infrastructure01.entity.AmbienteEntity;
-import triomaravilha.atrasosrafael.infrastructure01.repository.AmbienteEntityRepository;
+import org.triomaravilha.atrasosrafael.dominio.Ambiente;
+import org.triomaravilha.atrasosrafael.dominio.repositories.AmbienteRepository;
+import org.triomaravilha.atrasosrafael.infrastructure01.entity.AmbienteEntity;
+
 
 import java.util.List;
 import java.util.stream.StreamSupport;

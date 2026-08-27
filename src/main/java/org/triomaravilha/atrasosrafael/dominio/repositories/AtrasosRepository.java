@@ -1,6 +1,8 @@
 package org.triomaravilha.atrasosrafael.dominio.repositories;
 
-import triomaravilha.atrasosrafael.dominio.Atrasos;
+
+
+import org.triomaravilha.atrasosrafael.dominio.Atrasos;
 
 import java.util.List;
 

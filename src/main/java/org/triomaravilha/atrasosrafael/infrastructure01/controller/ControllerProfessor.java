@@ -3,9 +3,10 @@ package org.triomaravilha.atrasosrafael.infrastructure01.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import triomaravilha.atrasosrafael.dominio.Professor;
-import triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
-import triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
+import org.triomaravilha.atrasosrafael.dominio.Professor;
+import org.triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
+import org.triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
+
 
 import java.util.List;
 

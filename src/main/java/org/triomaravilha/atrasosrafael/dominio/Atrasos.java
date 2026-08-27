@@ -2,7 +2,6 @@ package org.triomaravilha.atrasosrafael.dominio;
 
 import lombok.Getter;
 import lombok.Setter;
-import triomaravilha.atrasosrafael.dominio.Professor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

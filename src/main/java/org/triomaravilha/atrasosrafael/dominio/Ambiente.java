@@ -2,7 +2,7 @@ package org.triomaravilha.atrasosrafael.dominio;
 
 import lombok.Getter;
 import lombok.Setter;
-import triomaravilha.atrasosrafael.dominio.Atrasos;
+
 
 @Getter
 @Setter

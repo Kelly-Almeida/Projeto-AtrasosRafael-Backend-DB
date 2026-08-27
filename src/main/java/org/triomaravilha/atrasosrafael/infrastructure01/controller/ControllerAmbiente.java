@@ -4,9 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import triomaravilha.atrasosrafael.dominio.Ambiente;
-import triomaravilha.atrasosrafael.dominio.repositories.AmbienteRepository;
-import triomaravilha.atrasosrafael.infrastructure01.entity.AmbienteEntity;
+import org.triomaravilha.atrasosrafael.dominio.Ambiente;
+import org.triomaravilha.atrasosrafael.dominio.repositories.AmbienteRepository;
+import org.triomaravilha.atrasosrafael.infrastructure01.entity.AmbienteEntity;
+
 
 import java.util.List;
 

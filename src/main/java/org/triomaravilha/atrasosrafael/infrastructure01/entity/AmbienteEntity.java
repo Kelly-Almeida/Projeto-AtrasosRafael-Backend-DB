@@ -3,7 +3,7 @@ package org.triomaravilha.atrasosrafael.infrastructure01.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import triomaravilha.atrasosrafael.infrastructure01.entity.AtrasosEntity;
+
 
 @Getter
 @Setter
