@@ -8,4 +8,5 @@ import lombok.Setter;
 public class Professor {
     private Long id;
     private String nome;
+    private String foto;
 }

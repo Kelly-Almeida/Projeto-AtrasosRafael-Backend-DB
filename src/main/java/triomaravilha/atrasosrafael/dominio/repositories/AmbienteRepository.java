@@ -6,8 +6,8 @@ import triomaravilha.atrasosrafael.infra.entity.AmbienteEntity;
 import java.util.List;
 
 public interface AmbienteRepository {
-    AmbienteEntity save(Ambiente ambiente);
+    AmbienteEntity save(AmbienteEntity ambiente);
     Ambiente findById(Long id);
     List<Ambiente> findAll();
-    void delete(Long id);
+    void deleteId(Long id);
 }
