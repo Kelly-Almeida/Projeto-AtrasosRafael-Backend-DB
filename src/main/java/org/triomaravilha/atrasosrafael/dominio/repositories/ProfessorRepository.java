@@ -1,4 +1,4 @@
-package triomaravilha.atrasosrafael.dominio.repositories;
+package org.triomaravilha.atrasosrafael.dominio.repositories;
 
 import triomaravilha.atrasosrafael.dominio.Professor;
 import triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
