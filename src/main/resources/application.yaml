@@ -4,8 +4,8 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/AtrasosRafael?createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: root
-    password: 25164036Ka!
+    username: kebibara
+    password: 175T10SJ
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

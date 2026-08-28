@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Professor</h1>
+    <p>Resultado:</p><p id="resp"></p>
+    <img src="" id="imagem"></img>
+    <button onclick="buscar()">Buscar</button>
+
+    <script>
+        function buscar(){
+            fetch('http://localhost:8080/professor/1')
+            .then(response => {
+                if (!response.ok) throw new Error('Erro na requisição');
+                return response.json();
+            })
+            .then(dados => {
+                document.getElementById('resp').innerText = dados.nome;
+                document.getElementById('imagem').src = dados.foto;
+            })
+            .catch(erro => {
+                document.getElementById('resp').innerText = 'Erro ao carregar.';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package org.triomaravilha.atrasosrafael.infrastructure01.repository;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.triomaravilha.atrasosrafael.dominio.Professor;
 import org.triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
@@ -10,12 +11,9 @@ import java.util.List;
 import java.util.stream.StreamSupport;
 
 @Repository
+@AllArgsConstructor
 public class JpaProfessorRepository implements ProfessorRepository {
     private final ProfessorEntityRepository professorEntityRepository;
-
-    public JpaProfessorRepository(ProfessorEntityRepository professorEntityRepository) {
-        this.professorEntityRepository = professorEntityRepository;
-    }
 
     @Override
     public void delete(Long id) {
