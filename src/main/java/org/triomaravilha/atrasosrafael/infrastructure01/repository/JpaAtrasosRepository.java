@@ -6,6 +6,7 @@ import org.triomaravilha.atrasosrafael.dominio.Atrasos;
 import org.triomaravilha.atrasosrafael.dominio.Professor;
 import org.triomaravilha.atrasosrafael.dominio.repositories.AtrasosRepository;
 import org.triomaravilha.atrasosrafael.infrastructure01.entity.AtrasosEntity;
+import org.triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
 
 import java.util.List;
 import java.util.stream.StreamSupport;
@@ -17,10 +18,9 @@ public class JpaAtrasosRepository implements AtrasosRepository {
 
 
     @Override
-    public AtrasosEntity save(Atrasos atrasos) {
-        AtrasosEntity entity = mapper(atrasos);
+    public AtrasosEntity save(AtrasosEntity atrasos) {
 
-        return atrasosEntityRepository.save(entity);
+        return atrasosEntityRepository.save(atrasos);
     }
 
     @Override
@@ -38,6 +38,7 @@ public class JpaAtrasosRepository implements AtrasosRepository {
 
     @Override
     public AtrasosEntity update(Atrasos atrasos, Long id) {
+
         Atrasos atrasoUp = findById(id);
 
         atrasoUp.setAula(atrasos.getAula());
@@ -50,28 +51,46 @@ public class JpaAtrasosRepository implements AtrasosRepository {
     }
 
     @Override
-    public void delete(Atrasos atrasos) {
-        atrasosEntityRepository.delete(mapper(atrasos));
+    public void deleteById(Long id) {
+        atrasosEntityRepository.deleteById(id);
     }
 
     private static Atrasos mapper(AtrasosEntity entity) {
-        Atrasos atraso = new Atrasos();
+        if (entity == null) return null;
 
+        Atrasos atraso = new Atrasos();
+        atraso.setCode(entity.getCode());
         atraso.setAula(entity.getAula());
         atraso.setData(entity.getData());
         atraso.setTempoAtraso(entity.getTempoAtraso());
-        atraso.setProfessor(mapper(entity).getProfessor());
+
+        if (entity.getProfessor() != null) {
+            Professor professor = new Professor();
+            professor.setId(entity.getProfessor().getId());
+            professor.setNome(entity.getProfessor().getNome());
+            professor.setFoto(entity.getProfessor().getFoto());
+            atraso.setProfessor(professor);
+        }
 
         return atraso;
     }
 
     private static AtrasosEntity mapper(Atrasos atraso) {
-        AtrasosEntity entity = new AtrasosEntity();
+        if (atraso == null) return null;
 
+        AtrasosEntity entity = new AtrasosEntity();
+        entity.setCode(atraso.getCode());
         entity.setAula(atraso.getAula());
         entity.setData(atraso.getData());
         entity.setTempoAtraso(atraso.getTempoAtraso());
-        entity.setProfessor(mapper(atraso).getProfessor());
+
+        if (atraso.getProfessor() != null) {
+            ProfessorEntity professorEntity = new ProfessorEntity();
+            professorEntity.setId(atraso.getProfessor().getId());
+            professorEntity.setNome(atraso.getProfessor().getNome());
+            professorEntity.setFoto(atraso.getProfessor().getFoto());
+            entity.setProfessor(professorEntity);
+        }
 
         return entity;
     }

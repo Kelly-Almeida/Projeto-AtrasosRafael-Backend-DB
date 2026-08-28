@@ -8,9 +8,9 @@ import org.triomaravilha.atrasosrafael.infrastructure01.entity.AtrasosEntity;
 import java.util.List;
 
 public interface AtrasosRepository {
-    AtrasosEntity save(Atrasos atrasos);
+    AtrasosEntity save(AtrasosEntity atrasos);
     List<Atrasos> findAll();
     Atrasos findById(Long id);
     AtrasosEntity update(Atrasos atrasos, Long id);
-    void delete(Atrasos atrasos);
+    void deleteById(Long id);
 }
