@@ -3,6 +3,7 @@ package org.triomaravilha.atrasosrafael.infrastructure01.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.triomaravilha.atrasosrafael.dominio.Professor;
 import org.triomaravilha.atrasosrafael.dominio.repositories.ProfessorRepository;
 import org.triomaravilha.atrasosrafael.infrastructure01.entity.ProfessorEntity;
@@ -23,7 +24,13 @@ public class ControllerProfessor{
 
     @GetMapping("/{id}")
     public Professor findById(@PathVariable Long id){
-        return this.professorRepository.findByID(id);
+        Professor prof = this.professorRepository.findByID(id);
+
+        if (prof == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Professor Not Found");
+        }
+
+        return prof;
     }
 
     @PostMapping
@@ -36,7 +43,13 @@ public class ControllerProfessor{
     }
 
     @DeleteMapping
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id){
+
+        if(professorRepository.findByID(id) == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Professor com id" + id + " não foi encontrado.");
+        }
+
         this.professorRepository.delete(id);
     }
 

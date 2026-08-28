@@ -3,6 +3,7 @@ package org.triomaravilha.atrasosrafael.infrastructure01.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 import org.triomaravilha.atrasosrafael.dominio.Atrasos;
 import org.triomaravilha.atrasosrafael.dominio.repositories.AtrasosRepository;
 import org.triomaravilha.atrasosrafael.infrastructure01.entity.AmbienteEntity;
@@ -23,7 +24,12 @@ public class ControllerAtrasos {
 
     @GetMapping("/{id}")
     public Atrasos findById(@PathVariable Long id){
-        return this.repository.findById(id);
+        Atrasos atraso = this.repository.findById(id);
+
+        if (atraso == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum registro com id " + id + " encontrado.");
+        }
+        return atraso;
     }
 
     @PostMapping
@@ -35,6 +41,10 @@ public class ControllerAtrasos {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id){
+        if(this.repository.findById(id) == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Nenhum registro com id " + id);
+        }
+
         this.repository.deleteById(id);
     }
 

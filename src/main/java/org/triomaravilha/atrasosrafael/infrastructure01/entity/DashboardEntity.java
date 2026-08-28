@@ -1,5 +1,6 @@
 package org.triomaravilha.atrasosrafael.infrastructure01.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,12 +19,15 @@ public class DashboardEntity {
     private Long id;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate dia;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime maiorTempoAtraso;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime tempoTotal;
 
     @Column(nullable = false)

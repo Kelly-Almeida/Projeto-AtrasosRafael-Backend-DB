@@ -44,6 +44,10 @@ public class ControllerAmbiente {
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteById(@PathVariable Long id) {
+        if(this.ambienteRepository.findById(id) == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Ambiente com id " + id);
+        }
+
         this.ambienteRepository.deleteId(id);
     }
 

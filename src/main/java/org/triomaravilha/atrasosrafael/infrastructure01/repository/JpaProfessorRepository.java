@@ -22,9 +22,7 @@ public class JpaProfessorRepository implements ProfessorRepository {
 
     @Override
     public ProfessorEntity save(Professor professor) {
-        ProfessorEntity entity = mapper(professor);
-
-        return professorEntityRepository.save(entity);
+       return professorEntityRepository.save(mapper(professor));
     }
 
     @Override
