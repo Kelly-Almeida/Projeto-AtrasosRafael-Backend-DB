@@ -21,7 +21,7 @@ public class ControllerProfessor {
         return this.professorRepository.findAll();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Professor findById(@PathVariable Long id){
         Professor prof = this.professorRepository.findByID(id);
 
