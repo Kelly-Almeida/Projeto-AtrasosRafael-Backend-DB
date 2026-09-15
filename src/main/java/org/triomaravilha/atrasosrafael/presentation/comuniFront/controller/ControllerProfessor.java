@@ -41,7 +41,7 @@ public class ControllerProfessor {
         return professorRepository.update(professor, id);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id){
 
