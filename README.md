@@ -1,4 +1,4 @@
-# ⏱️ Projeto Pontualidade: Prof. Rafael Costa
+# ⏱️ Projeto Pontualidade: Prof. Rafael Costa *Backend*
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto foi desenvolvido com um objetivo muito claro: **registrar e exibir, em tempo real, os atrasos do ilustríssimo Professor Rafael Cunha** na Escola SENAI Anchieta.
+Este projeto foi desenvolvido com um objetivo muito claro: **registrar e exibir, em tempo real, os atrasos do ilustríssimo Professor Rafael Costa** na Escola SENAI Anchieta.
 
 ### 🥪 A Verdadeira Motivação
 Tudo começou com a nossa constante batalha contra o relógio no horário de almoço. Quando somamos:
@@ -38,7 +38,7 @@ Tudo começou com a nossa constante batalha contra o relógio no horário de alm
 
 - [x] **Calendário do Atraso:** Mapeamento mensal dos dias em que a aula atrasou.
 - [ ] **Contador de Minutos Percebidos:** Cálculo do impacto direto no tempo útil de almoço.
-- [ ] **Estatísticas de Precisão:** Histórico de frequência e pontualidade.
+- [x] **Estatísticas de Precisão:** Histórico de frequência e pontualidade.
 
 ---
 
