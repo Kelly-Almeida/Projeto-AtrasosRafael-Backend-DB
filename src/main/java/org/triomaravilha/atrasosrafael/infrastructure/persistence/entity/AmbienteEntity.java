@@ -1,15 +1,20 @@
-package org.triomaravilha.atrasosrafael.infrastructure.entity;
+package org.triomaravilha.atrasosrafael.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "ambiente")
+@Table(
+        name = "ambiente"
+)
 public class AmbienteEntity {
 
     @Id
@@ -23,7 +28,8 @@ public class AmbienteEntity {
     private float umidade;
 
 
-    @OneToOne(cascade = CascadeType.ALL)
+ 
+    @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "atrasos_code", nullable = true)
     private AtrasosEntity atraso;
 

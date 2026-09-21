@@ -1,8 +1,10 @@
-package org.triomaravilha.atrasosrafael.infrastructure.entity;
+package org.triomaravilha.atrasosrafael.infrastructure.persistence.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -12,6 +14,8 @@ import java.time.LocalTime;
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "dashboard")
 public class DashboardEntity {
     @Id

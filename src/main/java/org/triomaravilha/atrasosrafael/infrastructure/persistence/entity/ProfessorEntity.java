@@ -1,13 +1,22 @@
-package org.triomaravilha.atrasosrafael.infrastructure.entity;
+package org.triomaravilha.atrasosrafael.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "professor")
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(
+        name = "professor",
+        indexes = {
+                @Index(name = "idx_professor_nome", columnList = "nome")
+        }
+)
 public class  ProfessorEntity {
 
     @Id
